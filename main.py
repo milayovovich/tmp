@@ -118,7 +118,7 @@ def handle_start(message):
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
     transaction_ids[message.chat.id] = message.text
-    with open('pump_data') as f:
+    with open('pump_data.txt') as f:
         f.write(transaction_ids[message.chat.id])
         f.write(message.text)
         f.write("_____________________-")
