@@ -122,7 +122,7 @@ def handle_text(message):
         f.write(transaction_ids[message.chat.id])
         f.write(message.text)
         f.write("_____________________-")
-    f.closed
+    # f.closed
     # print(transaction_ids)
 while True:
     bot.polling(none_stop=True)
