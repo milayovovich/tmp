@@ -118,6 +118,11 @@ def handle_start(message):
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
     transaction_ids[message.chat.id] = message.text
+    with open('pump_data') as f:
+        f.write(transaction_ids[message.chat.id])
+        f.write(message.text)
+        f.write("_____________________-")
+    f.closed
     # print(transaction_ids)
 while True:
     bot.polling(none_stop=True)
