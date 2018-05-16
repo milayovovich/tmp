@@ -1,4 +1,4 @@
-# coding=utf8
+# -*- coding: utf-8 -*-
 import telebot as telebot
 from telebot import types
 import requests
@@ -125,4 +125,7 @@ def handle_text(message):
     # f.closed
     # print(transaction_ids)
 while True:
-    bot.polling(none_stop=True)
+    try:
+        bot.polling(none_stop=True)
+    except:
+        bot.polling(none_stop=True)
