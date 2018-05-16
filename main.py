@@ -49,7 +49,7 @@ def inline(call):
                 keybord.add(types.InlineKeyboardButton(text=u'Купить инсайдерскую информацию о пампе', callback_data='buy_info'))
                 bot.send_message(call.message.chat.id, u'''Ближайший памп на этой бирже ожидается %s в 21:00 по МСК'''%zero_day, reply_markup=keybord)
             if market_id == '2':
-                zero_day = date(2018, 5, 18)
+                zero_day = date(2018, 5, 21)
                 market = MarketPlace('YOBIT', zero_day)
                 markets[call.message.chat.id] = market
                 keybord = types.InlineKeyboardMarkup()
@@ -63,7 +63,7 @@ def inline(call):
                 keybord.add(types.InlineKeyboardButton(text=u'Купить инсайдерскую информацию о пампе', callback_data='buy_info'))
                 bot.send_message(call.message.chat.id, u'''Ближайший памп на этой бирже ожидается %s в 21:00 по МСК'''%zero_day, reply_markup=keybord)
             if market_id == '4':
-                zero_day = date(2018, 5, 17)
+                zero_day = date(2018, 5, 20)
                 market = MarketPlace('MERCATOX', zero_day)
                 markets[call.message.chat.id] = market
                 keybord = types.InlineKeyboardMarkup()
